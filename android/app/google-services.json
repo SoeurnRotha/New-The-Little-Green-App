@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "548642117402",
+    "project_id": "the-little-green-e-commerce",
+    "storage_bucket": "the-little-green-e-commerce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548642117402:android:bed02f953f9dbed9007ea3",
+        "android_client_info": {
+          "package_name": "com.the_little_green.the_little_green_product_e_com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548642117402-km4ptev5cpc4qju08i9ttkeji4hhebb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.the_little_green.the_little_green_product_e_com",
+            "certificate_hash": "ce16beb80e8d1b6dd51b2df14b21622a889c7fb8"
+          }
+        },
+        {
+          "client_id": "548642117402-l75ch3sk28uicon70cgn10aefn3jhg5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX7lWJB3ihQE1D_fY1rHh0fnt2oXqNvDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548642117402-l75ch3sk28uicon70cgn10aefn3jhg5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
