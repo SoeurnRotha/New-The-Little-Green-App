@@ -1,46 +1,34 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-=======
-import 'dart:ffi';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
->>>>>>> bdb84f81285e74f93e5c6794a58ab68a156b0178
 
 import 'package:flutter/material.dart';
 
 
 import '../Cart/Cart.dart';
-<<<<<<< HEAD
 
 
 
 
 
-=======
+
 import '../GetX/Read_Data_uesing_Stream/Popular_Stream_Getx.dart';
 import '../Login_page/Profile_User_Upload.dart';
->>>>>>> bdb84f81285e74f93e5c6794a58ab68a156b0178
+
 import '../StramBuilder/Bast_stream.dart';
 import '../StramBuilder/Indoor_stream.dart';
 import '../StramBuilder/Outdoor_stream.dart';
 import '../StramBuilder/Popular_stream.dart';
 import '../StramBuilder/Recomments_stream.dart';
 
-<<<<<<< HEAD
 
 
 
 
-=======
+
+
 import 'package:get/get.dart';
->>>>>>> bdb84f81285e74f93e5c6794a58ab68a156b0178
+
 
 import '../StramBuilder/Slider_stream.dart';
 import '../favorite/favorite.dart';
@@ -50,12 +38,10 @@ import '../search/indoor_searchItems.dart';
 import '../search/outdoor_searchItems.dart';
 import '../search/recommnets_searchItems.dart';
 
-<<<<<<< HEAD
+
 import 'ProfilePage.dart';
 
 
-=======
->>>>>>> bdb84f81285e74f93e5c6794a58ab68a156b0178
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -236,13 +222,13 @@ class _HomePageState extends State<HomePage> {
         _homePage,
         FavoriteProduct(),
         myCarts(),
-<<<<<<< HEAD
+
 
         ProfilePage()
 
-=======
-        Profile_user_upload()
->>>>>>> bdb84f81285e74f93e5c6794a58ab68a156b0178
+
+
+
       ],
     );
   }
