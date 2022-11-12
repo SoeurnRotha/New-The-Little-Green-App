@@ -113,7 +113,7 @@ class _productViewState extends State<productView> {
                       ),
                       child: IconButton(
                         icon: Icon(Icons.favorite,
-                        color: snapshot.data!.docs.length == 0 ? Colors.white : Colors.redAccent ,),
+                        color: snapshot.data!.docs.length == 0 ? Colors.black : Colors.redAccent ,),
                         onPressed: (){
                           snapshot.data!.docs.length == 0 ? addToFavorite() : removieFavorite(snapshot.data!.docs.first.id);
                         },

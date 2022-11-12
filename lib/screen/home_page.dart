@@ -56,11 +56,12 @@ class _HomePageState extends State<HomePage> {
 
 
 
-
+  final _bucket = PageStorageBucket();
   @override
   void initState() {
     super.initState();
   }
+
   @override
   int _seleteindex = 0;
   Widget build(BuildContext context) {
@@ -68,7 +69,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: _buildAppbar,
       // drawer: drawer(),
-      body: _buildPageView(),
+      body: PageStorage(
+        bucket: _bucket,
+        child: _buildPageView(),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index){
           setState(() {
@@ -105,7 +109,9 @@ class _HomePageState extends State<HomePage> {
   get _buildAppbar{
     return AppBar(
       backgroundColor: Colors.white,
-      title: Text("The Little Green", style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.lightGreenAccent),),
+      title: Text("The Little Green", style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black,fontFamily: "f2"),),
+      centerTitle: true,
+
     );
   }
   get _homePage{
@@ -113,6 +119,7 @@ class _HomePageState extends State<HomePage> {
       color: Colors.grey[300],
       width: MediaQuery.of(context).size.width,
       child: ListView(
+        key: PageStorageKey<String> ("HomePage"),
         children: [
           SizedBox(height: 10,),
           SliderStream(),
@@ -210,6 +217,7 @@ class _HomePageState extends State<HomePage> {
   }
   Widget _buildPageView(){
     return PageView(
+      key: PageStorageKey<String> ("PageView"),
       controller: _pageController,
       onPageChanged: (index){
         setState((){
@@ -222,13 +230,7 @@ class _HomePageState extends State<HomePage> {
         _homePage,
         FavoriteProduct(),
         myCarts(),
-
-
         ProfilePage()
-
-
-
-
       ],
     );
   }

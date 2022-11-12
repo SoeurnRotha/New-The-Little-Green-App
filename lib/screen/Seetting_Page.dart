@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:the_little_green_product_e_com/Provider/Theme_Provider.dart';
 
 class SeettingPage extends StatefulWidget {
   const SeettingPage({Key? key}) : super(key: key);
@@ -9,7 +10,14 @@ class SeettingPage extends StatefulWidget {
 }
 
 class _SeettingPageState extends State<SeettingPage> {
+  ThemeProvider themeProvider = ThemeProvider();
   @override
+
+  bool _darkTheme = false;
+  final _bucket= PageStorageBucket();
+
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -21,19 +29,30 @@ class _SeettingPageState extends State<SeettingPage> {
           onPressed: ()=> Navigator.pop(context),
         ),
       ),
-      body: _buildBody,
+      body: PageStorage(
+        bucket: _bucket,
+        child: _buildBody,
+      ),
     );
   }
   get _buildBody{
     return Container(
       width: MediaQuery.of(context).size.width,
       child: ListView(
+        key: PageStorageKey<String> ("Seetting"),
         children: [
           ListTile(
             leading: Icon(Icons.nightlight),
             title: Text("Theme",style: TextStyle(fontWeight: FontWeight.bold,fontFamily: "f1",fontSize: 18),),
+            trailing:  Switch(
+              value: _darkTheme , onChanged: (state){
+                themeProvider.darkTheme = !themeProvider.darkTheme;
+                setState(() {
+                  _darkTheme = state;
+                });
+            },
+            ),
           ),
-
         ],
       ),
     );

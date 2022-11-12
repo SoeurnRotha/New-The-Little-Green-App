@@ -43,6 +43,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
 
   }
+  final _bucket = PageStorageBucket();
   @override
   void initState() {
     // TODO: implement initState
@@ -50,120 +51,124 @@ class _ProfilePageState extends State<ProfilePage> {
     getData();
   }
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      child: ListView(
-        physics: BouncingScrollPhysics(),
-        children: [
-          _buildGetDataUser_Profile,
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: GestureDetector(
-              onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> About_Us_Page())),
-              child: Container(
-                height: 60,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.grey
-                ),
-                child: ListTile(
-                  leading: Icon(Icons.info),
-                  title: Text("About US",style: TextStyle(fontSize: 18,fontFamily: "f1",fontWeight: FontWeight.bold),),
-                  trailing: Icon(Icons.arrow_forward_ios_outlined),
-                ),
-              ),
-            ),
-          ),
-        
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: GestureDetector(
-              onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> FavoriteProduct())),
-              child: Container(
-                height: 60,
-                decoration: BoxDecoration(
+    return PageStorage(
+      bucket: _bucket,
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: ListView(
+          key: PageStorageKey<String> ("Profile"),
+          physics: BouncingScrollPhysics(),
+          children: [
+            _buildGetDataUser_Profile,
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: GestureDetector(
+                onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> About_Us_Page())),
+                child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.grey
-                ),
-                child: ListTile(
-                  leading: Icon(Icons.favorite),
-                  title: Text("Favorite",style: TextStyle(fontSize: 18,fontFamily: "f1",fontWeight: FontWeight.bold),),
-                  trailing: Icon(Icons.arrow_forward_ios_outlined),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: InkWell(
-              onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> SeettingPage())),
-              child: Container(
-                height: 60,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey
-                ),
-                child: ListTile(
-                  leading: Icon(Icons.settings),
-                  title: Text("Seetting",style: TextStyle(fontSize: 18,fontFamily: "f1",fontWeight: FontWeight.bold),),
-                  trailing: Icon(Icons.arrow_forward_ios_outlined),
+                  ),
+                  child: ListTile(
+                    leading: Icon(Icons.info),
+                    title: Text("About US",style: TextStyle(fontSize: 18,fontFamily: "f1",fontWeight: FontWeight.bold),),
+                    trailing: Icon(Icons.arrow_forward_ios_outlined),
+                  ),
                 ),
               ),
             ),
-          ),
-         Padding(
-           padding: const EdgeInsets.all(15.0),
-           child: InkWell(
-             onTap: () async{
-               final FirebaseAuth _auth = FirebaseAuth.instance;
-               try {
 
-                 await showDialog(context: context, builder: (BuildContext context){
-                   return AlertDialog(
-                     title: Text("Logout",style: TextStyle(fontSize: 18,fontFamily: "f2",fontWeight: FontWeight.bold),),
-                     content: Text("Do you want to Logout?",style: TextStyle(fontFamily: "f2",fontSize: 17,),),
-                     actions: [
-                       ElevatedButton(
-                         onPressed: (){
-                           Navigator.pop(context);
-                         },
-                         child: Text("Cencel" ,style: TextStyle(fontSize: 16,fontFamily: "f1",fontWeight: FontWeight.bold),),
-                       ),
-                       ElevatedButton(
-                         onPressed: () async{
-                           await _auth.signOut();
-                           Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
-                         },
-                         child: Text("Logout",style: TextStyle(fontFamily: "f1", fontSize: 16,fontWeight: FontWeight.bold),),
-                       ),
-                     ],
-                   );
-                 });
-               } catch (e) {
-                 print('can not signOut as : $e');
-               }
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: GestureDetector(
+                onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> FavoriteProduct())),
+                child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey
+                  ),
+                  child: ListTile(
+                    leading: Icon(Icons.favorite),
+                    title: Text("Favorite",style: TextStyle(fontSize: 18,fontFamily: "f1",fontWeight: FontWeight.bold),),
+                    trailing: Icon(Icons.arrow_forward_ios_outlined),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: InkWell(
+                onTap:()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> SeettingPage())),
+                child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey
+                  ),
+                  child: ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text("Seetting",style: TextStyle(fontSize: 18,fontFamily: "f1",fontWeight: FontWeight.bold),),
+                    trailing: Icon(Icons.arrow_forward_ios_outlined),
+                  ),
+                ),
+              ),
+            ),
+           Padding(
+             padding: const EdgeInsets.all(15.0),
+             child: InkWell(
+               onTap: () async{
+                 final FirebaseAuth _auth = FirebaseAuth.instance;
+                 try {
 
-             },
-             child: Container(
-               height: 60,
-               decoration: BoxDecoration(
-                 borderRadius: BorderRadius.circular(10),
-                 color: Colors.white,
-                 boxShadow: [
-                   BoxShadow(
-                     spreadRadius: 2,
-                     color: Colors.red,
+                   await showDialog(context: context, builder: (BuildContext context){
+                     return AlertDialog(
+                       title: Text("Logout",style: TextStyle(fontSize: 18,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                       content: Text("Do you want to Logout?",style: TextStyle(fontFamily: "f2",fontSize: 17,),),
+                       actions: [
+                         ElevatedButton(
+                           onPressed: (){
+                             Navigator.pop(context);
+                           },
+                           child: Text("Cencel" ,style: TextStyle(fontSize: 16,fontFamily: "f1",fontWeight: FontWeight.bold),),
+                         ),
+                         ElevatedButton(
+                           onPressed: () async{
+                             await _auth.signOut();
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                           },
+                           child: Text("Logout",style: TextStyle(fontFamily: "f1", fontSize: 16,fontWeight: FontWeight.bold),),
+                         ),
+                       ],
+                     );
+                   });
+                 } catch (e) {
+                   print('can not signOut as : $e');
+                 }
 
-                   )
-                 ]
-               ),
-               child: Center(
-                 child: Text("Logout",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,fontFamily: "f1",color: Colors.red),),
+               },
+               child: Container(
+                 height: 60,
+                 decoration: BoxDecoration(
+                   borderRadius: BorderRadius.circular(10),
+                   color: Colors.white,
+                   boxShadow: [
+                     BoxShadow(
+                       spreadRadius: 2,
+                       color: Colors.red,
+
+                     )
+                   ]
+                 ),
+                 child: Center(
+                   child: Text("Logout",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,fontFamily: "f1",color: Colors.red),),
+                 ),
                ),
              ),
-           ),
-         )
-        ],
+           )
+          ],
+        ),
       ),
     );
   }

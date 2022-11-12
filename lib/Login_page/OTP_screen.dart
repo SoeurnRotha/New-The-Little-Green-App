@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:quickalert/quickalert.dart';
 
 import '../screen/home_page.dart';
 import 'login_page.dart';
@@ -24,10 +25,10 @@ class _OTP_screenState extends State<OTP_screen> {
     final defaultPinTheme = PinTheme(
       width: 56,
       height: 56,
-      textStyle: TextStyle(fontSize: 20, color: Color.fromRGBO(30, 60, 87, 1), fontWeight: FontWeight.w600),
+      textStyle: TextStyle(fontSize: 30, color: Color.fromRGBO(30, 60, 87, 1), fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
         border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
       ),
     );
 
@@ -74,7 +75,7 @@ class _OTP_screenState extends State<OTP_screen> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Pinput(
-
+                  defaultPinTheme: defaultPinTheme,
                   length: 6,
                   showCursor: true,
                   onChanged: (value){
@@ -97,16 +98,26 @@ class _OTP_screenState extends State<OTP_screen> {
                           verificationId: LoginPage.verify
                           , smsCode: code);
                       await _auth.signInWithCredential(credential);
-                      //note
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+
+                      //loadding
+                      await QuickAlert.show(
+                          context: context,
+                          type: QuickAlertType.success
+                      );
+
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> HomePage()), (route) => false);
 
 
 
                     }catch(e){
+                      await QuickAlert.show(
+                          context: context,
+                          type: QuickAlertType.error
+                      );
                       print(e);
                     }
                   },
-                  child: Text("Verify Code"),
+                  child: Text("Verify Code",style: TextStyle(fontFamily: "f2",fontSize: 18,fontWeight: FontWeight.bold),),
                 ),
               ),
               TextButton(

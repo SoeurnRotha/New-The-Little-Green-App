@@ -71,9 +71,10 @@ class _Login_AdminState extends State<Login_Admin> {
           Padding(
             padding: const EdgeInsets.only(right: 20,left: 20,top: 8,bottom: 8),
             child: ElevatedButton(
-              onPressed: (){
+              onPressed: ()async{
                 if(authHelper.Adminemail !="" &&authHelper.Adminpassword != ""){
                   authHelper.AdminLogin(context);
+
                 }
               },
               style: ElevatedButton.styleFrom(

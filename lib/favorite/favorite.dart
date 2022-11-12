@@ -12,6 +12,7 @@ class FavoriteProduct extends StatefulWidget {
 }
 
 class _FavoriteProductState extends State<FavoriteProduct> {
+  final _bucket= PageStorageBucket();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +20,15 @@ class _FavoriteProductState extends State<FavoriteProduct> {
       //   title: Text("Favorite"),
       //
       // ),
-      body: _buildBody,
+      body: PageStorage(
+        bucket:_bucket ,
+        child: _buildBody,
+      ),
     );
   }
   get _buildBody{
     return StreamBuilder<QuerySnapshot>(
+      key: PageStorageKey<String> ("Favorite"),
         stream: FirebaseFirestore.instance.collection("AddFavorite").doc(FirebaseAuth.instance.currentUser!.uid).collection("items").snapshots(),
         builder: (context , snapshot){
           if(snapshot.hasError){

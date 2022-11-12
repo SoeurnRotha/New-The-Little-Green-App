@@ -12,19 +12,21 @@ import '../model/CartModel.dart';
 import 'CheackOut.dart';
 class myCarts extends StatefulWidget {
   const myCarts({Key? key}) : super(key: key);
-
   @override
   State<myCarts> createState() => _myCartsState();
 }
 
 class _myCartsState extends State<myCarts> {
   CartHelper cartHelper = CartHelper();
-
+  final _bucket = PageStorageBucket();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildBody,
+      body: PageStorage(
+        bucket: _bucket,
+        child: _buildBody,
+      ),
 
 
     );
@@ -41,6 +43,7 @@ class _myCartsState extends State<myCarts> {
           }else{
             if(snapshot.hasData){
               return ListView.builder(
+                key: PageStorageKey<String>("Cart"),
                 physics: BouncingScrollPhysics(),
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, index){

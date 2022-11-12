@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quickalert/quickalert.dart';
 
 import '../../Login_page/login_page.dart';
 import '../Home_Admin.dart';
@@ -14,11 +15,12 @@ class AuthHelper {
   TextEditingController Adminpassword = TextEditingController();
   final firestore = FirebaseFirestore.instance;
   void AdminLogin(context) async{
-    showDialog(context: context, builder: (context){
-      return AlertDialog(
-        title: Center(child: CircularProgressIndicator(),),
-      );
-    });
+    // showDialog(context: context, builder: (context){
+    //   return AlertDialog(
+    //     title: Center(child: CircularProgressIndicator(),),
+    //   );
+    // });
+     QuickAlert.show(context: context, type: QuickAlertType.loading);
     await FirebaseFirestore.instance.collection("Admin").doc("adminLogin").snapshots().forEach((element) {
       if(element.data() ?['adminEmail'] == Adminemail.text && element.data() ?['adminPassword'] == Adminpassword.text){
         Navigator.push(context, MaterialPageRoute(builder: (context)=> Admin_Home()));
