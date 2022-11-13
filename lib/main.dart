@@ -1,20 +1,37 @@
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
 import 'package:the_little_green_product_e_com/Provider/Theme_Provider.dart';
-import 'package:the_little_green_product_e_com/Welcom%20Screen/Welcome_PageView.dart';
-import 'package:the_little_green_product_e_com/screen/home_page.dart';
+import 'package:the_little_green_product_e_com/Responsive/Responsive_Layout.dart';
+import 'package:the_little_green_product_e_com/Responsive/MobileApp.dart';
+import 'package:the_little_green_product_e_com/Responsive/WebApp.dart';
 
-import 'Login_page/login_page.dart';
 import 'package:provider/provider.dart';
 
 import 'Provider/StyleTheme.dart';
 
 void main() async{
+
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  if(kIsWeb){
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: "AIzaSyB8Yw7f0P_cl7oTFFYETTKKLv1OHbPrB_I",
+            authDomain: "the-little-green-e-commerce.firebaseapp.com",
+            projectId: "the-little-green-e-commerce",
+            storageBucket: "the-little-green-e-commerce.appspot.com",
+            messagingSenderId: "548642117402",
+            appId: "1:548642117402:web:d296b2c3a9aec403007ea3",
+            measurementId: "G-QE9D1YSSGZ"
+        )
+    );
+  }else{
+    await Firebase.initializeApp();
+  }
+
+
   runApp(TheLittleGreenApp());
 }
 class TheLittleGreenApp extends StatefulWidget {
@@ -58,20 +75,8 @@ class _TheLittleGreenAppState extends State<TheLittleGreenApp> {
   }
   get _buildScaffold{
     return Scaffold(
-      body: StreamBuilder<User?>(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot){
-          if(snapshot.connectionState == ConnectionState.waiting){
-            return Center(child: CircularProgressIndicator(),);
-          }else if(snapshot.hasError){
-            return Center(child: Text("Error"),);
-          // }else if(snapshot.hasData){
-          //   return HomePage();
-          }else{
-            return Welcome_Page();
-          }
-        },
-      ),
+      body: kIsWeb ? WebApp() : MobileApp()
     );
   }
+
 }
