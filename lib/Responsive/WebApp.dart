@@ -1,10 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/Responsive/Responsive_Layout.dart';
-import 'package:the_little_green_product_e_com/Responsive/Responsive_WebApp.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/Responsive_WebApp.dart';
 
-import 'Responsive_MoblieApp.dart';
+import 'Web/Responsive_MoblieApp.dart';
+import 'Web/Responsive_TebletApp.dart';
 
 class WebApp extends StatefulWidget {
   const WebApp({Key? key}) : super(key: key);
@@ -33,9 +34,10 @@ class _WebAppState extends State<WebApp> {
             }else if(snapshot.hasData){
               return Container(color: Colors.purple,);
           }else{
-            return Responsive_Laout(
-                mobileApp: Responsive_MobileApp(),
-                webApp: Responsive_WebApp()
+            return ScreenTypeLayout(
+              mobile: Responsive_MobileApp(),
+              tablet: Responsive_TablatApp(),
+              desktop: Responsive_WebApp(),
             );
 
           }

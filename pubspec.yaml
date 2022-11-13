@@ -71,6 +71,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   flutter_bloc: ^8.0.0
   quickalert: ^1.0.0
+  responsive_builder: ^0.4.3
 
 dev_dependencies:
   flutter_test:
