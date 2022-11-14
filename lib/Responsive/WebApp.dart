@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/Product/Custom_Scrool.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Responsive_WebApp.dart';
 
 import 'Web/Responsive_MoblieApp.dart';
@@ -17,8 +18,13 @@ class WebApp extends StatefulWidget {
 class _WebAppState extends State<WebApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildBody,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      scrollBehavior: MyCustomScrollBehavior(),
+
+      home: Scaffold(
+        body: _buildBody,
+      ),
     );
   }
   get _buildBody{
