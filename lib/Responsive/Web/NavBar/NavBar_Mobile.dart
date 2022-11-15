@@ -10,11 +10,17 @@ class NavBar_Mobile extends StatefulWidget {
 }
 
 class _NavBar_MobileState extends State<NavBar_Mobile> {
+
+  var scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 100,
       color: Colors.purple,
+      child: IconButton(
+        icon: Icon(Icons.menu),
+        onPressed: ()=> scaffoldKey.currentState?.openDrawer(),
+      ),
     );
   }
 }

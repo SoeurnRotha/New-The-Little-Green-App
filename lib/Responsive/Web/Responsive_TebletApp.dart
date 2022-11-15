@@ -35,14 +35,32 @@ class _Responsive_TablatAppState extends State<Responsive_TablatApp> {
         Slider_Tablat(),
         SizedBox(height: 10,),
         Delivery_Tablat(),
+        _buildPanal("Discount"),
         Discount_Tablat(),
+        _buildPanal("Recomment"),
         Recomment_Tablat(),
+        _buildPanal("Popular"),
         Popular_Tablat(),
+        _buildPanal("Bast"),
         Bast_Tablat(),
+        _buildPanal("Indoor"),
         Indoor_Tablat(),
+        _buildPanal("Outdoor"),
         Outdoor_Tablat(),
 
       ],
+    );
+  }
+  Widget _buildPanal(String text){
+    return Container(
+      margin: EdgeInsets.only(left: 20),
+      height: 50,
+
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(text, style: TextStyle(fontSize: 35,fontFamily: "f2",fontWeight: FontWeight.bold),),
+      ),
+
     );
   }
 }

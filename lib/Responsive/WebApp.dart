@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/About%20Us/AboutUs_Mobile.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Product/Custom_Scrool.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Responsive_WebApp.dart';
 
@@ -27,6 +29,24 @@ class _WebAppState extends State<WebApp> {
       ),
     );
   }
+  // final GoRoute _route = GoRoute(
+  //   routes: <GoRoute>[
+  //     GoRoute(
+  //       routes: <GoRoute>[
+  //
+  //       ],path: '/home', builder: (BuildContext context,GoRouterState state) => ScreenTypeLayout(mobile: Responsive_MobileApp(), tablet: Responsive_TablatApp(), desktop: Responsive_WebApp()),
+  //     ),
+  //
+  //     GoRoute(
+  //       routes: <GoRoute>[
+  //
+  //       ],path: '/aboutus', builder: (BuildContext context,GoRouterState state) => ScreenTypeLayout(mobile: AboutUs_Mobile(), tablet: AboutUs_Mobile(), desktop: AboutUs_Mobile()),
+  //
+  //     ),
+  //
+  //   ], path: '/'
+  // );
+
   get _buildBody{
     return Scaffold(
       body: StreamBuilder<User?>(

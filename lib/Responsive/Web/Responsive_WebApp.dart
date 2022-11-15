@@ -39,15 +39,33 @@ class _Responsive_WebAppState extends State<Responsive_WebApp> {
         Slider_Web(),
         SizedBox(height: 10,),
         Delivery_Web(),
+        _buildPanal("Discount"),
         Discount_Web(),
+        _buildPanal("Recomment"),
         Recomment_Web(),
+        _buildPanal("Popular"),
         Popular_Web(),
+        _buildPanal("Bast"),
         Bast_Web(),
+        _buildPanal("Indoor"),
         Indoor_Web(),
+        _buildPanal("Outdoor"),
         Outdoor_Web(),
 
         Container(height: 500,),
       ],
+    );
+  }
+  Widget _buildPanal(String text){
+    return Container(
+      margin: EdgeInsets.only(left: 20),
+      height: 50,
+
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(text, style: TextStyle(fontSize: 35,fontFamily: "f2",fontWeight: FontWeight.bold),),
+      ),
+
     );
   }
 

@@ -25,28 +25,49 @@ class _Responsive_MobileAppState extends State<Responsive_MobileApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
+      appBar: AppBar(),
       body: _buildBody,
     );
   }
   get _buildBody{
     return ListView(
       children: [
-        NavBar_Mobile(),
+        // NavBar_Mobile(),
         SizedBox(height: 10,),
         Slider_Mobile(),
         SizedBox(height: 10,),
         Delivery_Mobile(),
         SizedBox(height: 20,),
+        _buildPanal("Discount"),
         Discount_Mobile(),
+        _buildPanal("Recomment"),
         Recomment_Mobile(),
+        _buildPanal("Popular"),
         Popular_Mobile(),
+        _buildPanal("Bast"),
         Bast_Mobile(),
+        _buildPanal("Indoor"),
         Indoor_Mobile(),
+        _buildPanal("Outdoor"),
         Outdoor_Mobile(),
 
         Container(height: 500,)
 
       ],
+    );
+  }
+
+  Widget _buildPanal(String text){
+    return Container(
+      margin: EdgeInsets.only(left: 20),
+      height: 50,
+
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(text, style: TextStyle(fontSize: 35,fontFamily: "f2",fontWeight: FontWeight.bold),),
+      ),
+
     );
   }
 

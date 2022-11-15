@@ -135,13 +135,13 @@ class _LoginPageState extends State<LoginPage> {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
                   onPressed: ()async{
-                    //loading
-                    // showDialog(context: context, builder: (context){
-                    //   return AlertDialog(
-                    //     title: Center(child: CircularProgressIndicator(),),
-                    //   );
-                    // });
-                     QuickAlert.show(context: context, type: QuickAlertType.loading);
+                    // loading
+                    showDialog(context: context, builder: (context){
+                      return AlertDialog(
+                        title: Center(child: CircularProgressIndicator(),),
+                      );
+                    });
+                     // QuickAlert.show(context: context, type: QuickAlertType.loading);
                     await FirebaseAuth.instance.verifyPhoneNumber(
                         phoneNumber: "${_countryCode.text + phone}",
                         verificationCompleted: (PhoneAuthCredential credential){
