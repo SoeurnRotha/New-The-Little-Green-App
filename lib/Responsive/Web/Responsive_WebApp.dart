@@ -52,7 +52,6 @@ class _Responsive_WebAppState extends State<Responsive_WebApp> {
         _buildPanal("Outdoor"),
         Outdoor_Web(),
 
-        Container(height: 500,),
       ],
     );
   }

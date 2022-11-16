@@ -15,19 +15,46 @@ class _Delivery_MobileState extends State<Delivery_Mobile> {
         children: [
           Container(
               width: MediaQuery.of(context).size.width,
-            height: 120,
-            color: Colors.grey
+            height: 100,
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset("images/icon/01.png",width: 60,height: 60,),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Delivery to 25 Provinces/Cities",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,fontFamily: "f1"),),
+                    Text("Delivery-fee is \$1 to \$5 base on destination",style: TextStyle(fontFamily: "f1",fontSize: 18),),
+                  ],
+                )
+              ],
+            ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: 120,
-            color: Colors.yellow,
+              width: MediaQuery.of(context).size.width,
+            height: 100,
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset("images/icon/02.png",width: 60,height: 60,),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("ONLINE SUPPORT 24/7",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,fontFamily: "f1"),),
+                    Text("We are always ready to help you",style: TextStyle(fontFamily: "f1",fontSize: 18),),
+                  ],
+                )
+              ],
+            ),
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 120,
-            color: Colors.lightGreen,
-          ),
+
+
 
         ],
       ),

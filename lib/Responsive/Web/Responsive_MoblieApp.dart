@@ -25,9 +25,59 @@ class _Responsive_MobileAppState extends State<Responsive_MobileApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
-      appBar: AppBar(),
+
+      drawer: _buildDrawer,
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black,size: 30),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        title: Text("The Little Green", style: TextStyle(fontSize: 20,fontFamily: "f1",fontWeight: FontWeight.bold,color: Colors.black),),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search_sharp,size: 30,),
+            onPressed: (){
+
+            },
+          )
+        ],
+      ),
       body: _buildBody,
+    );
+  }
+  get _buildDrawer{
+    return Drawer(
+      child: ListView(
+        children: [
+          ListTile(
+            onTap: (){
+
+            },
+            leading: Icon(Icons.home_filled),
+            title: Text("Home",style: TextStyle(fontSize: 20,fontFamily: "f1",fontWeight: FontWeight.bold),),
+          ),
+          ListTile(
+            onTap: (){
+
+            },
+            leading: Icon(Icons.apps),
+            title: Text("App",style: TextStyle(fontSize: 20,fontFamily: "f1",fontWeight: FontWeight.bold),),
+          ),
+          ListTile(
+            onTap: (){
+
+            },
+            leading: Icon(Icons.info),
+            title: Text("About Us",style: TextStyle(fontSize: 20,fontFamily: "f1",fontWeight: FontWeight.bold),),
+          ),
+          ListTile(
+            onTap: (){
+
+            },
+            leading: Icon(Icons.call),
+            title: Text("Contacte",style: TextStyle(fontSize: 20,fontFamily: "f1",fontWeight: FontWeight.bold),),
+          ),
+        ],
+      ),
     );
   }
   get _buildBody{
@@ -52,7 +102,6 @@ class _Responsive_MobileAppState extends State<Responsive_MobileApp> {
         _buildPanal("Outdoor"),
         Outdoor_Mobile(),
 
-        Container(height: 500,)
 
       ],
     );
