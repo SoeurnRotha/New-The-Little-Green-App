@@ -21,7 +21,7 @@ class _Slider_WebState extends State<Slider_Web> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: 800,
       child: _buildStream,
     );
   }
@@ -56,7 +56,7 @@ class _Slider_WebState extends State<Slider_Web> {
             return _items(sliderList[index]);
           },
           options: CarouselOptions(
-              height: 450,
+              height: 700,
               // enlargeCenterPage: true,
               autoPlay: true,
               autoPlayInterval: Duration(seconds: 4),
@@ -98,12 +98,14 @@ class _Slider_WebState extends State<Slider_Web> {
             .of(context)
             .size
             .width,
-        height: 500,
+
+        height: 800,
         decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(items.image),
               fit: BoxFit.cover,
-            )
+            ),
+          color: Colors.grey
         ),
       ),
     );

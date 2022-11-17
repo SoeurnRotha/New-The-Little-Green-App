@@ -50,6 +50,15 @@ class _NavBar_WebState extends State<NavBar_Web> {
                 child: Text("Contacte", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 20),),
               ),
               SizedBox(width: 20,),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: IconButton(
+                  icon: Icon(Icons.search,size: 30,),
+                  onPressed: (){
+
+                  },
+                ),
+              )
             ],
           )
         ],

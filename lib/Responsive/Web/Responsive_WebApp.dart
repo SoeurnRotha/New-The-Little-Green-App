@@ -1,13 +1,7 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_controller.dart';
-import 'package:get/get.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Delivery/Delivery_Web.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/NavBar/NavBar_Web.dart';
-import 'package:the_little_green_product_e_com/Responsive/Web/Product/Discount%20Products/Discount_Web.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Slider/Slider_Web.dart';
 
 import 'Product/Bast Product/Bast_Web.dart';
@@ -32,6 +26,7 @@ class _Responsive_WebAppState extends State<Responsive_WebApp> {
   }
   get _buildBody{
     return ListView(
+
       physics: BouncingScrollPhysics(),
       children: [
         // _buildNavBar,

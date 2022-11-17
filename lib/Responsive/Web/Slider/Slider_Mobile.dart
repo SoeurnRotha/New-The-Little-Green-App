@@ -21,7 +21,7 @@ class _Slider_MobileState extends State<Slider_Mobile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 230,
+      height: 400,
       child: _buildStream,
     );
   }
@@ -56,7 +56,7 @@ class _Slider_MobileState extends State<Slider_Mobile> {
             return _items(sliderList[index]);
           },
           options: CarouselOptions(
-              height: 200,
+              height: 350,
               // enlargeCenterPage: true,
               autoPlay: true,
               autoPlayInterval: Duration(seconds: 4),
@@ -98,12 +98,13 @@ class _Slider_MobileState extends State<Slider_Mobile> {
             .of(context)
             .size
             .width,
-        height: 200,
+        height: 350,
         decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(items.image),
               fit: BoxFit.cover,
-            )
+            ),
+          color: Colors.grey
         ),
       ),
     );

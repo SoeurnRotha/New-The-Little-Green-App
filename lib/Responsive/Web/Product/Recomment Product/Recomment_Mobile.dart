@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/Detail_Page/Product_detail.dart';
 import 'package:the_little_green_product_e_com/helper/recomment_product_helper.dart';
 import 'package:the_little_green_product_e_com/model/recomment_product_model.dart';
 
@@ -12,10 +13,23 @@ class Recomment_Mobile extends StatefulWidget {
   State<Recomment_Mobile> createState() => _Recomment_MobileState();
 }
 
-class _Recomment_MobileState extends State<Recomment_Mobile> {
+class _Recomment_MobileState extends State<Recomment_Mobile> with SingleTickerProviderStateMixin  {
   RecommentHepler _recommentHepler = RecommentHepler();
-  bool isHover =false;
-  Offset mousePos = new Offset(0, 0);
+
+  bool isHover = false;
+  Offset offset = Offset(0, 0);
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -64,33 +78,37 @@ class _Recomment_MobileState extends State<Recomment_Mobile> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          MouseRegion(
-            onEnter: (e){
-              setState(() {
+          GestureDetector(
+            // onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailProduct(image: items.image, name: items.name, price: items.price, proInfo: items.proInfo, desInfo: items.desInfo))),
+            child: MouseRegion(
+              onEnter: (value){
+                setState(() {
+                  isHover = true;
+                });
+              },
+              onExit: (value){
+                setState(() {
+                  isHover = false;
+                });
+              },
+              
+              onHover: (value){
+                setState(() {
+                  _hover();
+                });
+              },
 
-              });
-            },
-            onHover: (e){
-              setState(() {
-
-              });
-            },
-            onExit: (e){
-              setState(() {
-
-              });
-            },
-
-            child: Container(
-              width: 200,
-              height: 200,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.grey[100],
-                  image: DecorationImage(
-                      image: NetworkImage("${items.image}"),
-                      fit: BoxFit.cover
-                  )
+              child: Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.grey[100],
+                    image: DecorationImage(
+                        image: NetworkImage("${items.image}"),
+                        fit: BoxFit.cover
+                    )
+                ),
               ),
             ),
           ),
@@ -106,6 +124,15 @@ class _Recomment_MobileState extends State<Recomment_Mobile> {
           )
         ],
       ),
+    );
+  }
+  
+  Widget _hover(){
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 1000),
+      width: 300,
+      height: 300,
+      child: Container(color: Colors.purple,),
     );
   }
 

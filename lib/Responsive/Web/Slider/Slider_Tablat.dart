@@ -21,7 +21,7 @@ class _Slider_TablatState extends State<Slider_Tablat> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: 600,
       child: _buildStream,
     );
   }
@@ -56,7 +56,7 @@ class _Slider_TablatState extends State<Slider_Tablat> {
             return _items(sliderList[index]);
           },
           options: CarouselOptions(
-              height: 400,
+              height: 500,
               // enlargeCenterPage: true,
               autoPlay: true,
               autoPlayInterval: Duration(seconds: 4),
@@ -98,12 +98,13 @@ class _Slider_TablatState extends State<Slider_Tablat> {
             .of(context)
             .size
             .width,
-        height: 400,
+        height: 500,
         decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(items.image),
               fit: BoxFit.cover,
-            )
+            ),
+          color: Colors.grey
         ),
       ),
     );
