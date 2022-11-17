@@ -16,10 +16,26 @@ class _NavBar_MobileState extends State<NavBar_Mobile> {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: Colors.purple,
-      child: IconButton(
-        icon: Icon(Icons.menu),
-        onPressed: ()=> scaffoldKey.currentState?.openDrawer(),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 3
+          )
+        ]
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: ()=> Scaffold.of(context).openDrawer(),
+          ),
+          Container(
+            child: Text("The Little Green",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,fontFamily: "f1"),),
+          )
+        ],
       ),
     );
   }

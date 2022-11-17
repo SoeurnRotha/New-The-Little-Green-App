@@ -4,14 +4,14 @@ import 'package:the_little_green_product_e_com/Responsive/Web/Slider/Slider_Mobi
 import 'package:the_little_green_product_e_com/Responsive/Web/Slider/Slider_Tablat.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Slider/Slider_Web.dart';
 
-class Slider extends StatefulWidget {
-  const Slider({Key? key}) : super(key: key);
+class Slider_bar extends StatefulWidget {
+  const Slider_bar({Key? key}) : super(key: key);
 
   @override
-  State<Slider> createState() => _SliderState();
+  State<Slider_bar> createState() => _Slider_barState();
 }
 
-class _SliderState extends State<Slider> {
+class _Slider_barState extends State<Slider_bar> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
