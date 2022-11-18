@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/Login_page/login_page.dart';
+
+import '../Login_page/login_page.dart';
 
 class Page2 extends StatefulWidget {
   const Page2({Key? key}) : super(key: key);

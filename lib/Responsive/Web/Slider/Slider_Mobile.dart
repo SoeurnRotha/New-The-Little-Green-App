@@ -3,9 +3,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:the_little_green_product_e_com/helper/slider_product_helper.dart';
 
-import '../../../model/Sllider_product_model.dart';
+import '../../../Mobile_App/helper/slider_product_helper.dart';
+import '../../../Mobile_App/model/Sllider_product_model.dart';
 
 class Slider_Mobile extends StatefulWidget {
   const Slider_Mobile({Key? key}) : super(key: key);

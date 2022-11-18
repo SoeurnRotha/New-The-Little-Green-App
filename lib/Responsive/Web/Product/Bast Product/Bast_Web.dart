@@ -1,11 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/helper/bast_product_helper.dart';
 
-import 'package:the_little_green_product_e_com/model/bast_product_model.dart';
-
-
+import '../../../../Mobile_App/helper/bast_product_helper.dart';
+import '../../../../Mobile_App/model/bast_product_model.dart';
 import '../Custom_Scrool.dart';
 class Bast_Web extends StatefulWidget {
   const Bast_Web({Key? key}) : super(key: key);

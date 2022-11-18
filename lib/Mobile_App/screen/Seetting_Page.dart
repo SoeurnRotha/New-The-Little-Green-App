@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/Provider/Theme_Provider.dart';
+
+import '../Provider/Theme_Provider.dart';
 
 class SeettingPage extends StatefulWidget {
   const SeettingPage({Key? key}) : super(key: key);

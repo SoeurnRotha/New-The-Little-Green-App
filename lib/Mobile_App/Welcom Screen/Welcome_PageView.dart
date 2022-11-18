@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:the_little_green_product_e_com/Welcom%20Screen/Page1.dart';
-import 'package:the_little_green_product_e_com/Welcom%20Screen/Page2.dart';
+
+import 'Page1.dart';
+import 'Page2.dart';
 
 class Welcome_Page extends StatefulWidget {
   const Welcome_Page({Key? key}) : super(key: key);

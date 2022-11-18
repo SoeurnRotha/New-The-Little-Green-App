@@ -1,15 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/helper/indoor_product_helper.dart';
-import 'package:the_little_green_product_e_com/helper/outdoor_product_helper.dart';
-import 'package:the_little_green_product_e_com/helper/popular_product_helper.dart';
-import 'package:the_little_green_product_e_com/helper/recomment_product_helper.dart';
-import 'package:the_little_green_product_e_com/model/indoor_product_model.dart';
-import 'package:the_little_green_product_e_com/model/outdoor_product_model.dart';
-import 'package:the_little_green_product_e_com/model/popular_product_model.dart';
-import 'package:the_little_green_product_e_com/model/recomment_product_model.dart';
 
+import '../../../../Mobile_App/helper/indoor_product_helper.dart';
+import '../../../../Mobile_App/model/indoor_product_model.dart';
 import '../Custom_Scrool.dart';
 class Indoor_Tablat extends StatefulWidget {
   const Indoor_Tablat({Key? key}) : super(key: key);

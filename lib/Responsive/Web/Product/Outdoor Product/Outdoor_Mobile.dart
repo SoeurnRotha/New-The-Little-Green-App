@@ -1,13 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/helper/outdoor_product_helper.dart';
-import 'package:the_little_green_product_e_com/helper/popular_product_helper.dart';
-import 'package:the_little_green_product_e_com/helper/recomment_product_helper.dart';
-import 'package:the_little_green_product_e_com/model/outdoor_product_model.dart';
-import 'package:the_little_green_product_e_com/model/popular_product_model.dart';
-import 'package:the_little_green_product_e_com/model/recomment_product_model.dart';
 
+import '../../../../Mobile_App/helper/outdoor_product_helper.dart';
+import '../../../../Mobile_App/model/outdoor_product_model.dart';
 import '../Custom_Scrool.dart';
 class Outdoor_Mobile extends StatefulWidget {
   const Outdoor_Mobile({Key? key}) : super(key: key);

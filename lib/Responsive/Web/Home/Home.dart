@@ -28,7 +28,6 @@ class _HomeState extends State<Home> {
         drawer: size.deviceScreenType == DeviceScreenType.mobile ? NavBarDrawer() : null,
         body: ListView(
           // yk item responsive dak in all
-          //
           children: [
             NavBar(),
             Slider_bar(),
@@ -37,12 +36,7 @@ class _HomeState extends State<Home> {
             Bast_web(),
             Indoor_web(),
             Outdoor_web(),
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
+
           ],
         ),
       ),

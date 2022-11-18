@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/helper/recomment_product_helper.dart';
-import 'package:the_little_green_product_e_com/model/recomment_product_model.dart';
+import 'package:flutter/material.dart';import '../../../../Mobile_App/helper/recomment_product_helper.dart';
 
+
+import '../../../../Mobile_App/model/recomment_product_model.dart';
 import '../Custom_Scrool.dart';
 class Recomment_Tablat extends StatefulWidget {
   const Recomment_Tablat({Key? key}) : super(key: key);

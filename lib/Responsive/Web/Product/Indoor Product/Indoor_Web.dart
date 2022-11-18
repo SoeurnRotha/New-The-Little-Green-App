@@ -1,11 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/helper/indoor_product_helper.dart';
-
-import 'package:the_little_green_product_e_com/model/indoor_product_model.dart';
 
 
+import '../../../../Mobile_App/helper/indoor_product_helper.dart';
+import '../../../../Mobile_App/model/indoor_product_model.dart';
 import '../Custom_Scrool.dart';
 class Indoor_Web extends StatefulWidget {
   const Indoor_Web({Key? key}) : super(key: key);

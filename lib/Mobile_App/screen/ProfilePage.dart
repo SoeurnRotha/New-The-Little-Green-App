@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:the_little_green_product_e_com/favorite/favorite.dart';
-import 'package:the_little_green_product_e_com/screen/About%20US.dart';
-import 'package:the_little_green_product_e_com/screen/Seetting_Page.dart';
 
 import '../Login_page/Profile_User_Upload.dart';
 import '../Login_page/login_page.dart';
+import '../favorite/favorite.dart';
+import 'About US.dart';
+import 'Seetting_Page.dart';
 
 
 class ProfilePage extends StatefulWidget {
