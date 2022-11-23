@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/NavBar/NavBarDrawer.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Slider/Slider.dart';
-import 'package:the_little_green_product_e_com/Responsive/Web/Slider/Slider_Web.dart';
-
 import '../NavBar/NavBar.dart';
 import '../Product/Bast Product/Bast_product_web.dart';
 import '../Product/Indoor Product/Indoor_product_web.dart';
@@ -29,6 +27,8 @@ class _HomeState extends State<Home> {
         body: ListView(
           // yk item responsive dak in all
           children: [
+            //my items responsive all
+
             NavBar(),
             Slider_bar(),
             Recomment_web(),

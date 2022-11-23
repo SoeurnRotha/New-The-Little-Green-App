@@ -1,20 +1,21 @@
 
+import 'dart:js_util';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:the_little_green_product_e_com/Responsive/MobileApp.dart';
-import 'package:the_little_green_product_e_com/Responsive/Web/Route/location.dart';
+
 import 'package:the_little_green_product_e_com/Responsive/WebApp.dart';
 
 import 'package:provider/provider.dart';
 
 import 'Mobile_App/Provider/StyleTheme.dart';
 import 'Mobile_App/Provider/Theme_Provider.dart';
-
+import 'package:url_strategy/url_strategy.dart';
 
 void main() async{
-  setupLocation();
 
   WidgetsFlutterBinding.ensureInitialized();
   if(kIsWeb){

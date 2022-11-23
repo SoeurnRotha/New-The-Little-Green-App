@@ -1,12 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:the_little_green_product_e_com/Detail_Page/Product_detail.dart';
 
 import '../../../../Mobile_App/helper/recomment_product_helper.dart';
 import '../../../../Mobile_App/model/recomment_product_model.dart';
 import '../Custom_Scrool.dart';
 class Recomment_Mobile extends StatefulWidget {
   const Recomment_Mobile({Key? key}) : super(key: key);
+
 
   @override
   State<Recomment_Mobile> createState() => _Recomment_MobileState();
@@ -78,7 +80,13 @@ class _Recomment_MobileState extends State<Recomment_Mobile> with SingleTickerPr
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
-            // onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailProduct(image: items.image, name: items.name, price: items.price, proInfo: items.proInfo, desInfo: items.desInfo))),
+            onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailProduct(
+              image: items.image,
+              name: items.name,
+              price: items.price,
+              proInfo: items.proInfo,
+              desInfo: items.desInfo,
+            ))),
             child: MouseRegion(
               onEnter: (value){
                 setState(() {
