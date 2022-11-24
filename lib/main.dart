@@ -66,10 +66,8 @@ class _TheLittleGreenAppState extends State<TheLittleGreenApp> {
         builder: (context,valye,child){
           return MaterialApp(
             theme: StyleTheme.themeData(themeProvider.darkTheme),
-
             debugShowCheckedModeBanner: false,
             home: _buildScaffold,
-
 
           );
         },

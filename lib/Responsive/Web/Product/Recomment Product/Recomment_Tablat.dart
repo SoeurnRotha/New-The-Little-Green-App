@@ -19,8 +19,8 @@ class _Recomment_TablatState extends State<Recomment_Tablat> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 350,
-      color: Colors.grey,
+      height: 430,
+
       child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: _buildStream
@@ -71,7 +71,7 @@ class _Recomment_TablatState extends State<Recomment_Tablat> {
             ))),
             child: Container(
               width: 200,
-              height: 200,
+              height: 300,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   color: Colors.grey[100],

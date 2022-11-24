@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
+import '../../../../Detail_Page/Product_detail.dart';
 import '../../../../Mobile_App/helper/bast_product_helper.dart';
 import '../../../../Mobile_App/model/bast_product_model.dart';
 import '../Custom_Scrool.dart';
@@ -20,7 +21,7 @@ class _Bast_MobileState extends State<Bast_Mobile> {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 350,
-      color: Colors.grey,
+
       child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: _buildStream
@@ -61,16 +62,25 @@ class _Bast_MobileState extends State<Bast_Mobile> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 200,
-            height: 200,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: Colors.grey[100],
-                image: DecorationImage(
-                  image: NetworkImage(items.image),
-                  fit: BoxFit.cover,
-                )
+          GestureDetector(
+            onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailProduct(
+              image: items.image,
+              name: items.name,
+              price: items.price,
+              proInfo: items.proInfo,
+              desInfo: items.desInfo,
+            ))),
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.grey[100],
+                  image: DecorationImage(
+                    image: NetworkImage(items.image),
+                    fit: BoxFit.cover,
+                  )
+              ),
             ),
           ),
           SizedBox(height: 10,),

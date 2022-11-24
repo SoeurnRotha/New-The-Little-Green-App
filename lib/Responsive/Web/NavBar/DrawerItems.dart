@@ -14,7 +14,6 @@ class _DrawerItemState extends State<DrawerItem> {
   @override
 
   Widget build(BuildContext context) {
-    Navigator.of(context).pushNamed('');
     return Container(
       alignment: Alignment.center,
       child:  ListTile(

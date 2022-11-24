@@ -36,7 +36,7 @@ class _Recomment_MobileState extends State<Recomment_Mobile> with SingleTickerPr
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 350,
-      color: Colors.grey,
+
       child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: _buildStream

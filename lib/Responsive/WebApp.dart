@@ -15,7 +15,7 @@ class _WebAppState extends State<WebApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
+      title: 'The Little Green',
       debugShowCheckedModeBanner: false,
       scrollBehavior: MyCustomScrollBehavior(),
       home: Scaffold(

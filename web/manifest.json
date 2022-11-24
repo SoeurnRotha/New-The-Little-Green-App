@@ -1,11 +1,11 @@
 {
-    "name": "the_little_green_product_e_com",
-    "short_name": "the_little_green_product_e_com",
+    "name": "The Little Green",
+    "short_name": "The Little Green",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Welcome to The little green Cambodia.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

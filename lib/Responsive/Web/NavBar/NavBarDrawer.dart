@@ -14,7 +14,7 @@ class _NavBarDrawerState extends State<NavBarDrawer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
+      width: 300,
      color: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

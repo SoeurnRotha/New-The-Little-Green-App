@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 class DetailProduct_Mobile extends StatefulWidget {
   const DetailProduct_Mobile({Key? key, required this.image, required this.name, required this.price, required this.proInfo, required this.desInfo}) : super(key: key);
 
@@ -15,6 +16,13 @@ class DetailProduct_Mobile extends StatefulWidget {
 }
 
 class _DetailProduct_MobileState extends State<DetailProduct_Mobile> {
+
+  final Uri _url = Uri.parse('https://www.facebook.com/messages/t/100470801444159');
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(_url)) {
+      throw 'Could not launch $_url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,18 +33,21 @@ class _DetailProduct_MobileState extends State<DetailProduct_Mobile> {
     );
   }
   get _buildButton{
-    return Container(
-      width: 80,
-      height: 80,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.grey[100],
-        image: DecorationImage(
-          image: AssetImage("images/icon/03.png"),
-          fit: BoxFit.cover
-          // fit: BoxFit.cover
-        )
+    return GestureDetector(
+      onTap: _launchUrl,
+      child: Container(
+        width: 80,
+        height: 80,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.grey[100],
+          image: DecorationImage(
+            image: AssetImage("images/icon/03.png"),
+            fit: BoxFit.cover
+            // fit: BoxFit.cover
+          )
 
+        ),
       ),
     );
   }

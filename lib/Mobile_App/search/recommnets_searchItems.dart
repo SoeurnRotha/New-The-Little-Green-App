@@ -38,6 +38,7 @@ class _Recomments_SearchState extends State<Recomments_Search> {
                 suffixIcon: IconButton(
                   icon: Icon(Icons.clear),
                   onPressed: (){
+                    
                   },
                 ),
                 prefixIcon:Icon(Icons.search) ,
@@ -59,6 +60,7 @@ class _Recomments_SearchState extends State<Recomments_Search> {
   }
   get _buildBody {
     return _buildSearchData();
+
   }
 //search product
   Widget _buildSearchData(){

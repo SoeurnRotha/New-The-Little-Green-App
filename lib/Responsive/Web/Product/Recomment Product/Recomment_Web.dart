@@ -19,8 +19,8 @@ class _Recomment_WebState extends State<Recomment_Web> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 350,
-      color: Colors.grey,
+      height: 450,
+
       child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: _buildStream
@@ -71,7 +71,7 @@ class _Recomment_WebState extends State<Recomment_Web> {
             ))),
             child: Container(
               width: 200,
-              height: 200,
+              height: 350,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   color: Colors.grey[100],

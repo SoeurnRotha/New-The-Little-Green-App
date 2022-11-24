@@ -25,18 +25,98 @@ class _HomeState extends State<Home> {
       builder: (context ,size) => Scaffold(
         drawer: size.deviceScreenType == DeviceScreenType.mobile ? NavBarDrawer() : null,
         body: ListView(
-          // yk item responsive dak in all
           children: [
-            //my items responsive all
-
             NavBar(),
             Slider_bar(),
-            Recomment_web(),
-            Popular_web(),
-            Bast_web(),
-            Indoor_web(),
-            Outdoor_web(),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
 
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Text("Recomment",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                    Container(
+                      child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Recomment_web(),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Text("Popular",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                    Container(
+                      child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Popular_web(),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Text("Bast",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                    Container(
+                      child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Bast_web(),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Text("Indoor",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                    Container(
+                      child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Indoor_web(),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Text("Outdoor",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                    Container(
+                      child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Outdoor_web(),
           ],
         ),
       ),
