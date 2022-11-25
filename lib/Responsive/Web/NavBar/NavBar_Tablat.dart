@@ -47,18 +47,8 @@ class _NavBar_TablatState extends State<NavBar_Tablat> {
               SizedBox(width: 20,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Contacte", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 16),),
+                child: Text("016 315 751", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 16),),
               ),
-              SizedBox(width: 20,),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: IconButton(
-                  icon: Icon(Icons.search,size: 25,),
-                  onPressed: (){
-
-                  },
-                ),
-              )
             ],
           )
         ],
