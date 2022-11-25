@@ -4,6 +4,9 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/NavBar/NavBarDrawer.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/Slider/Slider.dart';
 import 'package:the_little_green_product_e_com/View%20All/Recomment_View/Recomment_responsive.dart';
+import '../../../View All/Bast_View/Bast_viewAll.dart';
+import '../../../View All/Indoor_View/Indoor_viewAll.dart';
+import '../../../View All/Outdoor_View/Outdoor_viewAll.dart';
 import '../../../View All/Popular_View/Popular_view_responsive.dart';
 import '../NavBar/NavBar.dart';
 import '../Product/Bast Product/Bast_product_web.dart';
@@ -83,7 +86,7 @@ class _HomeState extends State<Home> {
                       child: Text("Bast",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
                     ),
                     GestureDetector(
-                      // onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Recomment_viewAll())),
+                      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Bast_viewAll())),
                       child: Container(
                         child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
                       ),
@@ -104,7 +107,7 @@ class _HomeState extends State<Home> {
                       child: Text("Indoor",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
                     ),
                     GestureDetector(
-                      // onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Recomment_viewAll())),
+                      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Indoor_viewAll())),
                       child: Container(
                         child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
                       ),
@@ -124,7 +127,7 @@ class _HomeState extends State<Home> {
                       child: Text("Outdoor",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
                     ),
                     GestureDetector(
-                      // onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Recomment_viewAll())),
+                      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Outdoor_viewAll())),
                       child: Container(
                         child: Text("View all",style: TextStyle(fontSize: 20,fontFamily: "f2",fontWeight: FontWeight.bold),),
                       ),
