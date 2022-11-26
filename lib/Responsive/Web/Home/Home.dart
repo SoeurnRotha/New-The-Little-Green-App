@@ -137,6 +137,13 @@ class _HomeState extends State<Home> {
               ),
             ),
             Outdoor_web(),
+            SizedBox(height: 30,),
+
+            Container(
+              height: 100,
+              color: Colors.black,
+              child: Center(child: Text("© The Little Green. 2022. All Rights Reserved ", style: TextStyle(fontSize: 15,fontFamily: "f2",fontWeight: FontWeight.bold,letterSpacing: 2,color: Colors.white),maxLines: 1,overflow: TextOverflow.ellipsis  ,)),
+            )
           ],
         ),
       ),

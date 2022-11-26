@@ -37,11 +37,6 @@ class _NavBar_TablatState extends State<NavBar_Tablat> {
               SizedBox(width: 20,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("App", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 16),),
-              ),
-              SizedBox(width: 20,),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
                 child: Text("About Us", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 16),),
               ),
               SizedBox(width: 20,),

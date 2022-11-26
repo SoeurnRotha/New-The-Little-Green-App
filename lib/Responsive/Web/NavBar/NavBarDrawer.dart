@@ -19,9 +19,8 @@ class _NavBarDrawerState extends State<NavBarDrawer> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          DrawerItem(title: 'App', icon: Icons.apps),
           DrawerItem(title: 'About us', icon: Icons.info),
-          DrawerItem(title: 'Contacte', icon: Icons.call),
+          DrawerItem(title: '016 315 751', icon: Icons.call),
         ],
       ),
     );
