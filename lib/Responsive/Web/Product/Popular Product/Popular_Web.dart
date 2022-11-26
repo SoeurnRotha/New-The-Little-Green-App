@@ -86,7 +86,7 @@ class _Popular_WebState extends State<Popular_Web> {
           Container(
             alignment: Alignment.center,
             width: 200,
-            child: Text(items.name,style: TextStyle(fontFamily: "f2",fontSize: 15),),
+            child: Text(items.name,style: TextStyle(fontFamily: "f2",fontSize: 15),maxLines: 1,overflow: TextOverflow.ellipsis),
           ),
           SizedBox(height: 10,),
           Container(

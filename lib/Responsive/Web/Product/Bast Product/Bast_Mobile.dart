@@ -87,7 +87,7 @@ class _Bast_MobileState extends State<Bast_Mobile> {
           Container(
             alignment: Alignment.center,
             width: 200,
-            child: Text(items.name,style: TextStyle(fontFamily: "f2",fontSize: 15),),
+            child: Text(items.name,style: TextStyle(fontFamily: "f2",fontSize: 15),maxLines: 2,overflow: TextOverflow.ellipsis),
           ),
           SizedBox(height: 10,),
           Container(
