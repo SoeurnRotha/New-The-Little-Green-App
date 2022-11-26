@@ -18,7 +18,7 @@ class DetailProduct_Tablat extends StatefulWidget {
 
 class _DetailProduct_TablatState extends State<DetailProduct_Tablat> {
 
-  final Uri _url = Uri.parse('https://www.facebook.com/messages/t/100470801444159');
+  final Uri _url = Uri.parse('https://www.facebook.com/profile.php?id=100063546492674');
   Future<void> _launchUrl() async {
     if (!await launchUrl(_url)) {
       throw 'Could not launch $_url';

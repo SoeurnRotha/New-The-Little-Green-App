@@ -17,7 +17,7 @@ class DetailProduct_Mobile extends StatefulWidget {
 
 class _DetailProduct_MobileState extends State<DetailProduct_Mobile> {
 
-  final Uri _url = Uri.parse('https://www.facebook.com/messages/t/100470801444159');
+  final Uri _url = Uri.parse('https://www.facebook.com/profile.php?id=100063546492674');
   Future<void> _launchUrl() async {
     if (!await launchUrl(_url)) {
       throw 'Could not launch $_url';

@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AboutUs_Mobile extends StatefulWidget {
-  const AboutUs_Mobile({Key? key}) : super(key: key);
+class AboutUs_Web extends StatefulWidget {
+  const AboutUs_Web({Key? key}) : super(key: key);
 
   @override
-  State<AboutUs_Mobile> createState() => _AboutUs_MobileState();
+  State<AboutUs_Web> createState() => _AboutUs_WebState();
 }
 
-class _AboutUs_MobileState extends State<AboutUs_Mobile> {
+class _AboutUs_WebState extends State<AboutUs_Web> {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -25,7 +25,7 @@ class _AboutUs_MobileState extends State<AboutUs_Mobile> {
           padding: const EdgeInsets.all(8.0),
           child: ListTile(
             leading: CircleAvatar(
-              radius: 40,
+                radius: 40,
                 backgroundColor: Colors.deepPurpleAccent,
                 child: Icon(Icons.pin_drop,color: Colors.white,)
             ),
@@ -86,15 +86,15 @@ class _AboutUs_MobileState extends State<AboutUs_Mobile> {
   }
   get _buildCover{
     return Container(
-      height: 300,
+      height: 600,
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("images/intro/back.jpg"),
-          filterQuality: FilterQuality.high,
-          fit: BoxFit.cover,
-          alignment: Alignment.center
-          // fit: BoxFit.cover
-        )
+          image: DecorationImage(
+              image: AssetImage("images/intro/back.jpg"),
+              filterQuality: FilterQuality.high,
+              fit: BoxFit.cover,
+              alignment: Alignment.center
+            // fit: BoxFit.cover
+          )
       ),
     );
   }

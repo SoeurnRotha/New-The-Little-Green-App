@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/About%20Us/AboutUs_Mobile.dart';
 import 'package:the_little_green_product_e_com/Responsive/Web/NavBar/DrawerItems.dart';
 
 class NavBarDrawer extends StatefulWidget {
@@ -19,7 +20,12 @@ class _NavBarDrawerState extends State<NavBarDrawer> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          DrawerItem(title: 'About us', icon: Icons.info),
+          InkWell(
+            mouseCursor: MaterialStateMouseCursor.clickable,
+
+              child: DrawerItem(title: 'About us', icon: Icons.info),
+            onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => AboutUs_Mobile())),
+          ),
           DrawerItem(title: '016 315 751', icon: Icons.call),
         ],
       ),

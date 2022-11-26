@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/About%20Us/AboutUs_Tablat.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/About%20Us/AboutUs_responsive.dart';
 
 class NavBar_Tablat extends StatefulWidget {
   const NavBar_Tablat({Key? key}) : super(key: key);
@@ -37,7 +39,10 @@ class _NavBar_TablatState extends State<NavBar_Tablat> {
               SizedBox(width: 20,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("About Us", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 16),),
+                child: InkWell(
+                  onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutUs_responsive())),
+                    mouseCursor: MaterialStateMouseCursor.clickable,
+                    child: Text("About Us", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 16),)),
               ),
               SizedBox(width: 20,),
               Padding(

@@ -109,6 +109,7 @@ flutter:
     - images/intro/logo.png
     - images/intro/back.jpg
     - images/intro/google.png
+    - images/intro/01.jpg
     - images/intro/otp.png
     - images/product/02.png
     - images/product/profile.png

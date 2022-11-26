@@ -25,17 +25,20 @@ class _NavBar_MobileState extends State<NavBar_Mobile> {
           )
         ]
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: ()=> Scaffold.of(context).openDrawer(),
-          ),
-          Container(
-            child: Text("The Little Green",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,fontFamily: "f1"),),
-          )
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: ()=> Scaffold.of(context).openDrawer(),
+            ),
+            Container(
+              child: Text("The Little Green",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,fontFamily: "f1"),),
+            )
+          ],
+        ),
       ),
     );
   }

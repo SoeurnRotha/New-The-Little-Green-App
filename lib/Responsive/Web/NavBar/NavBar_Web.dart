@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/About%20Us/AboutUs_responsive.dart';
+import 'package:the_little_green_product_e_com/Responsive/Web/About%20Us/About_Web.dart';
 
 class NavBar_Web extends StatefulWidget {
   const NavBar_Web({Key? key}) : super(key: key);
@@ -37,7 +39,10 @@ class _NavBar_WebState extends State<NavBar_Web> {
               SizedBox(width: 20,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("About Us", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 20),),
+                child: InkWell(
+                    onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutUs_responsive())),
+                    mouseCursor: MaterialStateMouseCursor.clickable,
+                    child: Text("About Us", style: TextStyle(fontFamily: "f1",fontWeight: FontWeight.bold,fontSize: 16),)),
               ),
               SizedBox(width: 20,),
               Padding(
